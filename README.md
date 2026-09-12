@@ -4,7 +4,9 @@ Red teaming means intentionally trying to break or attack a system to find secur
 
 - Act like a hacker, but with permission and find the weaknesses so we can fix them.
 
-##  1.1 The LLM attack Surface : where an attacker can enter
+# LLM Attacks & Adversarial Techniques
+
+###  1.1 The LLM attack Surface : where an attacker can enter
 
 
 Direct ( chat input )       -   The end user typing into the interface.
@@ -19,7 +21,7 @@ Supply chain                -   A third party model-plugin, or dependency mainta
 They look similler but require completely different fixes.
 
 
-## 1.2 Prompt injection: Direct and Indirect
+### 1.2 Prompt injection: Direct and Indirect
 
 Direct prompt injection is simplest case: the attacker is user, typing the instructions straight to the chatbox.
 
@@ -29,7 +31,7 @@ Example - A summarizer agent reads a support ticket containing the text AI assis
 ### Note: 
 Block phrases like "ingnore your instructions" will stop the laziest attackers and nobody else.
 
-## 1.3 jailbreak families you must be able to name on sight.
+### 1.3 jailbreak families you must be able to name on sight.
 Attempt to bypass an LLM's safety rules or restrictions by crafting a particular prompt or conversation.
 
 Jailbreak = Tricking the AI into doing something it was designed not to do.
@@ -89,14 +91,14 @@ Turn 5 → final harmful request
 - When it describes ONE long prompt packed with fake example dialogues, it's many-shot. When it describes an automated attacker model iterating against the target, it's PAIR. Anchor on the mechanism, not the vibe.
 
 
-## 1.4 Filter evasion : token sumggling and homoglyphs
+### 1.4 Filter evasion : token sumggling and homoglyphs
 Token sumggling : Hide or split sensitive words so that the filter doesnt recognize it, while the LM may still understand what the attacker means.
 
 Homoglyphs : character that looks similler to another but actually different. like Latin letters.
 
 Zero-width characeter insertion : splitting a banned keyword with invisible Unicode characters that a human and the model both silently ignore, but a naive filter does not.
 
-## Privacy and IP attacks: four ways to steal from a model
+#### Privacy and IP attacks: four ways to steal from a model
 
 Model Extraction    -   steal the model, attacker repetedly queries to a model and studies the output.
 
@@ -106,14 +108,14 @@ Model Inversion     -   Recover information about the training data. reverse the
 
 Property inference  -   Discover hidden property.
 
-### NOTE:
+#### NOTE:
 Membership inference answers a yes/no question about ONE record. 
 
 Property inference answers a statistical question about the ENTIRE dataset. 
 
 Model inversion actually reconstructs content. 
 
-## 1.6 Availability attacks: making the model expensive or slow
+### 1.6 Availability attacks: making the model expensive or slow
 
 Some attack tries to make model unusable ot unaffordable, without ever violating a content policy.
 
@@ -127,10 +129,10 @@ Context-stuffing                - fill the context window. fill the context with
 much stuff.
 
 
-### Note: 
+#### Note: 
 - If your only guardrails are content-based, availability attacks will sail straight through them. You need rate limiting and per-request size caps as an independent control layer.
 
-## 1.7 Data and model poisoning: the training-time attack
+### 1.7 Data and model poisoning: the training-time attack
 Poisoning happens before the model is ever deployed.
 
 An Attacker with write access to training or finetunning data:
@@ -138,13 +140,13 @@ An Attacker with write access to training or finetunning data:
 - insert a small number of mislabelled or trigger-tagged examples.
 - Working fine in normal cases untill some phrase will triggers.
 
-### NOTE: 
+#### NOTE: 
 - Poisoning corrupts the source of truth the model relies on.
 - Injection corrupts the sinle CONVERSATION.
 - A poisoned model or knowledge base produces bad output even with a perfectly begin prompt.
 
 
-## OWSAP TOP 10 for LLM
+# 2.OWSAP TOP 10 for LLM
 
 In traditional web application logic is mostly fixed code.
 
@@ -152,7 +154,7 @@ OWSAP's Traditional web application Top 10 focuses on SQL injection, Broken Auth
 
 LLM applications are totally different than traditional.
 
-### Top 10 List:
+### 2.1 Top 10 List:
 | Category              |     one-line defination |
 | ----------------------|  ---------------------- |
 | LLM01 Prompt injection | Attacker crafted instructions  |
@@ -166,7 +168,7 @@ LLM applications are totally different than traditional.
 | LLM09 Misinformation | The model confidently produces false content presented as fact |
 | LLM10 Unbounded Consumption | send  maximal-length, maximan-complexity requests with no per-user quota and watch cost/latency. |
 
-## OWSAP AI Exchange.
+### 2.2 OWSAP AI Exchange.
 
 Top 10 is deliberately a HEADLINE list. built only for awareness.
 The OWSAP AI exchange is 300+ pages technical reference underneath it.
@@ -213,7 +215,7 @@ Threats catalog = detailed list of different ways AI systems can be attacked.
 - Apply the right Attacks and defenses to the right AI architecture.
 - Dont use one Generic security checklist for every AI  system.
 
-#### Traditional ML classifier:
+### 2.3 Traditional ML classifier:
 ```
 Image → ML model → Cat/Dog
 ```
@@ -222,7 +224,7 @@ Main concerns might be:
 - Model evasion
 - Model theft
 
-#### Generative AI
+### 2.4 Generative AI
 User → Prompt → LLM → Answer
 
 Now you worry about:
@@ -231,7 +233,7 @@ Now you worry about:
 - Information disclosure
 - Hallucination
 
-#### Agentic AI
+### 2.5 Agentic AI
 ```
 User
  ↓
@@ -254,17 +256,17 @@ Now there are additional concerns:
 The red-team program that only test the chatbox and ignores the agents tool integrations is not incomplete -- it is testing the wrong system.  Agentic attack is where the real business impact usually lives.
 
 
-## Red Team vs. Penetration test vs. Bug Bounty for AI
+### 2.6 Red Team vs. Penetration test vs. Bug Bounty for AI
 
 Red Team        : Testing whether the system resists the actual attacker behavior
 Penetration test: Compliance checkpoints, vendor due diligence
 Bug Bounty      : continuos attack
 Conformity assessment: Pre-release, regulatory AU AI Act
 
-## Risk Management & Threat Modeling
+# 3. Risk Management & Threat Modeling
 NIST AI RMF, MITRE ATLAS, and AI-adapted threat modeling.
 
-1. NIST AI RMF : Govern, Map, Measure, Manage
+NIST AI RMF : Govern, Map, Measure, Manage
 this risk management framework organizes AI risk work into four functions.
 
 ### Govern:
@@ -310,7 +312,7 @@ STRIDE category:
 - Denial of service
 - Elevation of privillege
 
-## AI Governance & Compliance
+# 4. AI Governance & Compliance
 
 | Framework | Jurisdiction  | Core  | focus |
 | ---------- | ------------ | ------ | ---- |
@@ -322,7 +324,7 @@ STRIDE category:
 | CCPA |  California consumer data | Access, deletion, and disclosure rights |
 
 
-### EU AI Act:
+### 4.1 EU AI Act:
 The Acts sorts the AI systems into four tiers by risk, with obligations scaling accordingly.
 ISO/IEC 42001, 
 Data protection Laws ( GDPR, HIPPA, CCPA) that apply the moment an LLM touches personal data.  
@@ -334,7 +336,7 @@ Data protection Laws ( GDPR, HIPPA, CCPA) that apply the moment an LLM touches p
 #### NOTE:
 A conformity assessment is required for HIGH-RISK systems, not for every AI system. 
 
-### ISO/IEC 42001: an AI management system, not a scan.
+### 4.2 ISO/IEC 42001: an AI management system, not a scan.
 
 Framework for managing AI responsibly   across an entire organization, it is not a tool that scans an AI model for vulnerabilities.
 
@@ -354,12 +356,12 @@ How is the AI system monitored after deployment?
 How does the organization continuously improve?
 ```
 
-### GDPR
+### 4.3 GDPR
 - When an LLM based system makes a legally significant decission about a person -- denying loan, rejecting a job application -- with No human intervention at any point, GDPR **Article 22** restricts that and grants the individual a right to obtain human review of the decision.
 
 - Example: An EU resident whose loan application was auto-rejected by an LLM-based underwriting systemm with no human ever looking at the file, can invoke Article 22 to demand a human reconsider it.
 
-### Sector Specific Triggers : HIPPA and CCPA
+### 4.4 Sector Specific Triggers : HIPPA and CCPA
 
 #### HIPPA -> Healthcare + Protected Health Information (PHI)
 - U.S. Health Insurance Portability and Accountability Act (HIPAA).
@@ -376,7 +378,7 @@ California residents can have right such as:
 1. Right to know - What personal information is collected.
 2. Right to delete - request deletion of personal information, subject to execeptions.
 
-## Governance artifacts you will actually be  asked to produce.
+### 4.5 Governance artifacts you will actually be  asked to produce.
 AI governance documents/assessments that an organization may need to create to prove that its AI systems are being used and deployed responsibly.
 
 **AI security and compliance paperwork.**
@@ -423,9 +425,9 @@ It comes with GDPR.
 | **4** | Spam filter                                                 | 🟢 **Minimal**     | Ordinary, low-risk AI application                                                |
 | **5** | AI approving/denying loan applications with no human review | 🔴 **High**        | Credit/loan access is a high-risk use case                                       |
 
-# Blue Team: Defence and Monitoring
+# 5. Blue Team: Defence and Monitoring
 
-### 1. Defence in depth for LLM applications
+### 5.1. Defence in depth for LLM applications
 
 No Single control stops evey attack. in production there is multiple layers so that a single bypassed control does not compromise the complete system.
 
@@ -436,7 +438,7 @@ No Single control stops evey attack. in production there is multiple layers so t
 | Rate limiter | In front of the whole pipeline |  Sponge examples, denial-of-wallet |
 | Observability / SIEM  | Wrapping everything |  Detects what the other layers missed, after the fact |
 
-### 2. Input filtering and output filtering
+### 5.2. Input filtering and output filtering
 ```
 Input filter
     |
@@ -448,33 +450,33 @@ Output filter
    User
 ```
 
-### 3. Detection: behavioural baseline vs. static signature
+### 5.3. Detection: behavioural baseline vs. static signature
 - Static Signature : Looking for known bad patterns.
 - Behavioural Baselining: The security syst, builds a baseline of normal behaviour.
 
-### 4. Canary tokens vs. Honey Tokens
+### 5.4. Canary tokens vs. Honey Tokens
 - Canary tokens : Fake credentials
 - Honey Tokens : Fake sensitive documents
 
-### 5. Logging, Observability and PII redaction
+### 5.5. Logging, Observability and PII redaction
 - LLM should log every promt and response for debugging and incendt response.
 But the log store instanly becomes sensitive-data repository.
 - Automatically stripping credit card, numbers, SSNs. email before storing into logs.
 
-### 6. Purple Teaming
+### 5.6. Purple Teaming
 Red and blue into the same room.
 Red team attempt jail break and Blue team detect it immediately.
 
-# Identity & Access Management for AI
+# 6. Identity & Access Management for AI
 
-### Traditional IAM isn't enough for agents.
+### 6.1 Traditional IAM isn't enough for agents.
 RBAC - A single assigned role
 
 ABAC - Multiple contextual attributes at once
 
 Zero Trust - Never implicit; every call re-verified
 
-### Service Accounts and Capability tokens
+### 6.2 Service Accounts and Capability tokens
 
 - Service Accounts : Who is making the call ?
 ```
@@ -485,20 +487,20 @@ Don't use human's personal credentials.
 - Capability Token: What is the caller allowed to do ? Dont give long lived token, Give temporary permission for specific operation.
 
 
-### Delegated authorization: oAuth 2,0 and OIDC
+### 6.4 Delegated authorization: oAuth 2,0 and OIDC
 
 When Agent needs to call third party API without users password. oAuth 2.0 is standard way.
 
-### Secret Management & Vector database access control
+### 6.5 Secret Management & Vector database access control
 - Secret Maager/Valut should provide :  access policies + Audit logs + rotation.
 - Vector Database Access control : protect Tenant data.
 
-### Human in loop authorization gates.
+### 6.6 Human in loop authorization gates.
 - Before some high impact action workflow should pause and ask human to explicitely approve.
 
-# Secure Agent Architecture
+# 7. Secure Agent Architecture
 
-### Anatomy of Secure Agent's tool pipeline
+### 7.1 Anatomy of Secure Agent's tool pipeline
 ```
 User input
 -> system Prompt Isolation
@@ -508,14 +510,14 @@ User input
 -> External API
 ```
  
-### Sandboxing
+### 7.2 Sandboxing
 An Agent that can execute model-generated code should run inside an isolated, resource limited container with no network egress and fresh file system as request.
  So malicious script can not affect other system.
 
-### Circuit breakers
+### 7.3 Circuit breakers
 Consecutive tool-call failures or suspicious actions in a session and automatically halts the agents autonomy.
 
-### Tool Allow-listing and schema validation
+### 7.4 Tool Allow-listing and schema validation
 
 #### Tool Allow-listing
 Agent should have access only to explicitly approved tools/functions.
@@ -528,10 +530,10 @@ Example:
 #### Schema validation
 Even if the function itself is allowed, its argument must be validated.
 
-### System-prompt / instruction-data channel isolation.
+### 7.5 System-prompt / instruction-data channel isolation.
 Channel isolation = Seperate trusted instruction from untrsted data.
 
-### Multi-Agent Trust boundaries
+### 7.6 Multi-Agent Trust boundaries
 Agent A blindly trust whatever Agent B says.
 
 If Agent B is compromised or its input has been manipulated it cloud return : Call delete_database().
@@ -549,7 +551,7 @@ Agent A
    ├── Validate parameters
    └── Execute only if permitted
 ```
-### MCP Security Architecture
+### 7.7 MCP Security Architecture
 An Agent May have access to the multiple MCP servers: Gitlab, Kubernetes, Database.
 
 Each MCP server can expose different tools. like delete_database, delete_repository etc.
@@ -558,4 +560,64 @@ This is not safe.
 
 Don't trust MCP by discovery. Trust MCP by policy.
 
-### Secure RAG Pipeline by design
+### 7.8 Secure RAG Pipeline by design
+
+This is the secure-RAG version of "don't trust retrived dontent just because the search engine found it."
+
+#### Normal RAG:
+```
+User query
+    ↓
+Similarity search
+    ↓
+Vector DB
+    ↓
+Top matching documents
+    ↓
+LLM context
+    ↓
+Answer
+```
+#### Secure RAG
+```
+User query
+    ↓
+Similarity search
+    ↓
+Retrieved document
+    ↓
+┌─────────────────────────────┐
+│ Provenance validation       │
+│                             │
+│ 1. Approved source?         │
+│ 2. Checksum valid?          │
+│ 3. Expected document?       │
+└─────────────────────────────┘
+    ↓
+   PASS ──────────► LLM context
+    │
+   FAIL
+    ↓
+  REJECT
+```
+
+# 8. Agent Lifecycle & Operations
+
+### 8.1 Operate-and-maintain loop
+
+Security is continuous, Not a one-time deployment check:
+```
+Deploy → Monitor → Test → Patch → Canary → Deploy again
+```
+You continuosly watch for drift, abuse, vulnerabilities and unexpected behaviour.
+
+### 8.2 Drift Monitoring
+Drift = behaviour changes over time without an intentional changes.
+
+Nobody changed the prompt or model, but the systems behaviour changed. so monitoring must be continuos.
+
+### 8.3 Regression Testing + Canary Rollout
+Regression Testing: re-run known security tests after changes. It catches known vulnerabilities re-opening.
+
+Canary Rollout: Send the new model to small percentage of users.
+
