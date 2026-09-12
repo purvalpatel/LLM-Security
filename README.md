@@ -621,3 +621,112 @@ Regression Testing: re-run known security tests after changes. It catches known 
 
 Canary Rollout: Send the new model to small percentage of users.
 
+Remember:
+```
+Regression = known failures
+Canary = unknown failures
+```
+You need both.
+
+### 8.4 CART — Continuous Automated Red Teaming
+Instead of doing red-team testing only occasinally:
+CART Continuosly generates new jailbreaks and tests the model.
+
+### 8.5 Secure Decommissioning
+Agent removed ≠ agent decommissioned
+
+If its API Key is still valid, it can still be abused.
+
+### 8.6 Vibe-Coding Risk
+Vibe coding = accepting AI-generated code into production without adequate human/security review.
+
+AI-generated code still requires human security review.
+
+# 9. AI/LLM Supply Chain & Third-Party Risk
+
+Securing everything your  AI system depends on: Models, Plugins, MCP, Servers, Packages and external LLM vendors.
+
+### 9.1 AI Supply Chain
+
+There are two supply chains:
+```
+1. MODEL SUPPLY CHAIN
+Model Hub → Verify signature → Internal Registry → Production
+
+2. TOOL SUPPLY CHAIN
+Plugin/MCP → Review permissions → Pin version/hash → Agent
+```
+
+Key idea: Don't trust a model or tool simply because it comes from a popular source.
+
+### 9.2 Model Provenance + Pickle Risk
+
+**Model provenance**: Verify that the model weights:
+
+- Came from the claimed publisher
+- Have not been modified
+- Match the expected cryptographic signature/hash
+
+**Pickle danger**: 
+- Python pickle can contain executable code.
+
+```
+Pickle = potentially arbitrary code execution
+Safetensors = safer tensor-only serialization
+```
+
+### 9.3 AI-BOM / ML-BOM:
+Inventory of models, datasets, lineage.
+
+Think of an AI-BOM as an SBOM for AI.
+
+It inventories things such as:
+```
+Model
+Dataset
+Fine-tuning lineage
+Model dependencies
+```
+If a vulnerability is discovered in an upstream model:
+```
+Vulnerability discovered
+        ↓
+AI-BOM
+        ↓
+Find every affected AI application
+```
+No guessing.
+
+### 9.4 Plugin/MCP Vetting + Rug Pull
+Before using a third-party plugin/MCP:
+- Review its permissions
+- Review its code/manifest
+- Approve it
+- Pin the exact version/hash
+
+Rug pull:
+A rug pull occurs when something that was already trusted is changed after approval.
+
+#### NOTE:
+Pin the exact version/hash and verify it before use.
+
+Approved once + changes later = Rug pull
+
+### 9.5 Third-Party LLM API Risk
+Third-party LLM = supply-chain dependency + data-privacy risk.
+
+### 9.6 Typosquatting / Dependency Confusion
+An attacker publishes a malicious package with a name very similar to a legitimate ML package.
+
+A developer accidentally installs the malicious package.
+
+This is a software supply-chain attack targeting the ML ecosystem.
+
+
+### 9.7 Watermarking vs Steganography
+
+|         | **Watermarking**                                   | **Steganography**                |
+| ------- | -------------------------------------------------- | -------------------------------- |
+| Purpose | Prove/identify content origin                      | Hide a secret message            |
+| Signal  | Provenance signal                                  | Hidden information               |
+| Example | Statistical signal indicating AI-generated content | Hide "SECRET123" inside an image |
