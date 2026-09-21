@@ -41,26 +41,26 @@
 
 # Risk Management & Threat Modeling
 ### - Risk Management Programs:
-- NIST AI RMF ( Risk Management Factor ) <br>
-        - Govern <br>
-        - Map <br>
-        - Measure <br>
-        - Manage  <br>
+- NIST AI RMF ( Risk Management Factor )
+    - Govern
+    - Map
+    - Measure
+    - Manage
 - MITRE ATLAS
-Tactics:
-        - Reconnaissance <br>
-        - Resource Development <br>
-        - Initial Access <br>
-        - ML Model Access <br>
-        - Execution <br>
-        - Persistance <br>
-        - Defence Evasion <br>
-        - Credential Access <br>
-        - Discovery <br>
-        - Collection <br>
-        - ML Attack Staging <br>
-        - Exfilteration <br>
-        - Impact <br>
+Tactics: <br>
+    - Reconnaissance
+    - Resource Development
+    - Initial Access
+    - ML Model Access
+    - Execution
+    - Persistance
+    - Defence Evasion
+    - Credential Access
+    - Discovery
+    - Collection
+    - ML Attack Staging
+    - Exfilteration
+    - Impact
 
 ### Threat Modeling AI system with Adapted STRIDE
 STRIDE (Spoofing, Temparing, Repudiation, Information Disclosure, DOS, Elevation of privillege)
@@ -89,23 +89,23 @@ For AI systems:
 
 # Blue Team Defense & Monitoring
 - Defence in depth for LLM applications
-        - Input Filter
-        - Output Limiter
-        - Rate Limiter
-        - Observability/SIEM
+    - Input Filter
+    - Output Limiter
+    - Rate Limiter
+    - Observability/SIEM
 - Detection
-        - Behavioural Baselining
-        - Static Signatures
+    - Behavioural Baselining
+    - Static Signatures
 - Canary Tokens And Honey Tokens
 - Logging
 - Observability
 - PII Redaction
 - AI Specific Incident Response
-        - Contain
-        - Preserve
-        - Assess
-        - Remediate
-        - Notify
+    - Contain
+    - Preserve
+    - Assess
+    - Remediate
+    - Notify
 - Purple Teaming - read team + Blue team
 
 
@@ -114,8 +114,8 @@ For AI systems:
 - Secure Accounts
 - Capability Tokens
 - Delegated Authorization
-        - OAuth 2.0
-        - OIDC
+    - OAuth 2.0
+    - OIDC
 - Secret Management
 - Vector Database Access Control
 - Human-in-the-loop Authorization gates
