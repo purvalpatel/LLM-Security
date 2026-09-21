@@ -32,13 +32,48 @@
 - LLM08  :  Vector & Embedding weakness
 - LLM09  :  Misinformation
 - LLM10  :  Unbound consumption
-  
+
+
+- Red Team
+- Penetration Test
+- Bug Bounty
+- Conformity Assessment
+
 # Risk Management & Threat Modeling
-- NIST AI RMF
+### - Risk Management Programs:
+- NIST AI RMF ( Risk Management Factor )
+        - Govern
+        - Map
+        - Measure
+        - Manage 
 - MITRE ATLAS
-- AI-adapted STRIDE
-- risk registers
-- Red Team cadence
+Tactics:
+        - Reconnaissance
+        - Resource Development
+        - Initial Access
+        - ML Model Access
+        - Execution
+        - Persistance
+        - Defence Evasion
+        - Credential Access
+        - Discovery
+        - Collection
+        - ML Attack Staging
+        - Exfilteration
+        - Impact
+
+### Threat Modeling AI system with Adapted STRIDE
+STRIDE (Spoofing, Temparing, Repudiation, Information Disclosure, DOS, Elevation of privillege)
+For AI systems:
+- Temparing
+- Information Disclosure
+- Denial of service
+- Elevation of privillege
+
+### The Governance Artifacts every program needs
+- AI Risk Register
+- Model Card
+- Residual risk Acceptance
 
 # AI Governance & Complaince
 - EU-AI Act
@@ -47,37 +82,65 @@
 - ISO/IEC 42001
 - CCPA
 
-# Blue Team Defence & Monitoring
-- Guardrail pipeline
-- Behavioural Baselining
-- Canary/Honey Tokens
-- PII redaction
-- DLP
-- Incident Response
+### Governance Artifacts you will actually be asked to produce:
+- AUP (Acceptable use policy)
+- Conformity assessment
+- Data Protection impact Assessment (DPIA)
+
+# Blue Team Defense & Monitoring
+- Defence in depth for LLM applications
+        - Input Filter
+        - Output Limiter
+        - Rate Limiter
+        - Observability/SIEM
+- Detection
+        - Behavioural Baselining
+        - Static Signatures
+- Canary Tokens And Honey Tokens
+- Logging
+- Observability
+- PII Redaction
+- AI Specific Incident Response
+        - Contain
+        - Preserve
+        - Assess
+        - Remediate
+        - Notify
+- Purple Teaming - read team + Blue team
+
 
 # Identity & Access Management for AI
 - RBAC/ABAC/Zero Trust
-- Capability tokens
-- Secret Valuting
+- Secure Accounts
+- Capability Tokens
+- Delegated Authorization
+        - OAuth 2.0
+        - OIDC
+- Secret Management
 - Vector Database Access Control
+- Human-in-the-loop Authorization gates
 
 # Secure Agent Architecture & Design
+- Anatomy of secure Agents tool pipeline
 - Sandboxing
 - Circuit Breakers
-- Tool Allow-listing
-- MCP security
-- Secure RAG pipelines
+- Tool Allow-listing & Schema Validation
+- System Prompt/Instruction-data channel isolation
+- Multi-Agent Trust boundaries
+- MCP security Architecture
+- Secure RAG pipelines design
 
 # Agent Lifecycle & Operations
 - Drift Monitoring
 - Regression Testing
 - Canary Rollout
-- Continueous red teaming
-- Vive-coding risk
+- Continuous Automated red teaming
+- Secure Decommisioning
+- Vibe-coding risk in AI-Assisted development
 
 # AIML Supply chain & Third Party risk
-- Model Provenance
+- Model Provenance & Unsafe Deserialization
 - Unsafe deserialization
-- AI-BOM
+- AI-BOM / ML-BOM
 - Plugin/MCP marketplace vetting
 - Rug-pull attacks
