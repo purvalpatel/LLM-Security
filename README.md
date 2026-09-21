@@ -41,26 +41,26 @@
 
 # Risk Management & Threat Modeling
 ### - Risk Management Programs:
-- NIST AI RMF ( Risk Management Factor )
-        - Govern
-        - Map
-        - Measure
-        - Manage 
+- NIST AI RMF ( Risk Management Factor ) <br>
+        - Govern <br>
+        - Map <br>
+        - Measure <br>
+        - Manage  <br>
 - MITRE ATLAS
 Tactics:
-        - Reconnaissance
-        - Resource Development
-        - Initial Access
-        - ML Model Access
-        - Execution
-        - Persistance
-        - Defence Evasion
-        - Credential Access
-        - Discovery
-        - Collection
-        - ML Attack Staging
-        - Exfilteration
-        - Impact
+        - Reconnaissance <br>
+        - Resource Development <br>
+        - Initial Access <br>
+        - ML Model Access <br>
+        - Execution <br>
+        - Persistance <br>
+        - Defence Evasion <br>
+        - Credential Access <br>
+        - Discovery <br>
+        - Collection <br>
+        - ML Attack Staging <br>
+        - Exfilteration <br>
+        - Impact <br>
 
 ### Threat Modeling AI system with Adapted STRIDE
 STRIDE (Spoofing, Temparing, Repudiation, Information Disclosure, DOS, Elevation of privillege)
