@@ -1,14 +1,38 @@
 # LLM Attacks and Adversarial Techniques
-- Prompt injection
-- Jailbreak Families ( DAN, Crescendo, Skeleton Key, Many-shot, PAIR, Adversarial Suffix, Token Smuglling )
-- Model Extraction
-- Membership Inference
-- Model Inversion
-- Sponge/Dos
+- Direct
+- Indirect
+- Training Time
+- Supply chain
+- Jailbreak Families
+    - PAIR
+    - DAN Style
+    - Skeleton Key
+    - Crescendo
+    - Many-Shot Jailbreaking
+    - Adversarial Smuggling
+- Filter Evasion
+    - Token Smuggling
+    - Homologlyphs
+- Privacy and IP attacks ( 4 ways to steal from model )
+    - Model Extraction
+    - Membership Inference
+    - Model Invension
+    - Property inference
+- Availability Attacks  - Make Model Expensive
+- Data and Model Poisioning - Training time attack
 
 # OWSAP Top 10 For LLM Applications & Red Teaming
-- LLM01-LLM10 Categoryagainst red incident scenario
-
+- LLM01  :  Prompt Injection
+- LLM02  :  Sensitive information disclosure
+- LLM03  :  Supply chain
+- LLM04  :  Data and Model poisioning
+- LLM05  :  Improoper Output Handling
+- LLM06  :  Excessive Agency
+- LLM07  :  System Prompt Leakage
+- LLM08  :  Vector & Embedding weakness
+- LLM09  :  Misinformation
+- LLM10  :  Unbound consumption
+  
 # Risk Management & Threat Modeling
 - NIST AI RMF
 - MITRE ATLAS
