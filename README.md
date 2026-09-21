@@ -33,7 +33,7 @@
 - LLM09  :  Misinformation
 - LLM10  :  Unbound consumption
 
-
+### Some other terms:
 - Red Team
 - Penetration Test
 - Bug Bounty
