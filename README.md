@@ -173,3 +173,12 @@ Attack → Detect → Learn → Improve
 | **DeepTeam**   | Automated red teaming for LLM vulnerabilities such as prompt injection and jailbreaks. |
 | **ART**        | Adversarial attacks and robustness testing for ML models.                              |
 | **Counterfit** | Automated adversarial testing of AI/ML systems.                                        |
+
+```
+Garak → scan
+PyRIT → attack/red-team
+Promptfoo → test/evaluate
+Giskard → validate model security & quality
+Inspect AI → evaluate agents/LLMs
+ART → adversarial ML
+```
