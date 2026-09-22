@@ -34,10 +34,10 @@
 - LLM10  :  Unbound consumption    →       RESOURCES
 
 ### Some other terms:
-- Red Team
-- Penetration Test
-- Bug Bounty
-- Conformity Assessment
+- Red Team          → Simulate attacker
+- Pen Test          → Exploit vulnerabilities
+- Bug Bounty        → Find bugs → Get reward
+- Conformity        → Check against standards
 
 # Risk Management & Threat Modeling
 ### - Risk Management Programs:
