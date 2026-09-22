@@ -41,12 +41,12 @@
 
 # Risk Management & Threat Modeling
 ### - Risk Management Programs:
-- NIST AI RMF ( Risk Management Factor )
+- NIST AI RMF ( Risk Management Factor ) → How an organization MANAGES AI RISK
     - Govern
     - Map
     - Measure
     - Manage
-- MITRE ATLAS <br>
+- MITRE ATLAS → How an ATTACKER attacks an AI system <br>
 Tactics: MITRE ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems) is a knowledge base of adversary tactics and techniques targeting AI-enabled systems. <br>
 
 | Tactic                   | One-line explanation                                                                                                                          |
