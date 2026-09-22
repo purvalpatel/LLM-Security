@@ -69,49 +69,61 @@ Tactics: MITRE ATLAS (Adversarial Threat Landscape for Artificial-Intelligence S
 ### Threat Modeling AI system with Adapted STRIDE
 **STRIDE** (Spoofing, Temparing, Repudiation, Information Disclosure, DOS, Elevation of privillege)
 For AI systems:
-- **Temparing**
-- **Information Disclosure**
-- **Denial of service**
-- **Elevation of privillege**
+- **Temparing**    → Change something      → Integrity
+- **Information Disclosure**  → See something        → Confidentiality
+- **Denial of service** → Stop something        → Availability
+- **Elevation of privillege** → Gain more access     → Authorization
 
 ### The Governance Artifacts every program needs
-- AI Risk Register
-- Model Card
-- Residual risk Acceptance
+- **AI Risk Register** → What risks do we have?
+- **Model Card**  → What is this model and what are its limitations?
+- **Residual risk Acceptance** → What risk remains, and who accepts it?
 
 # AI Governance & Complaince
-- EU-AI Act
-- GDPR
-- HIPPA in LLM Context
-- ISO/IEC 42001
-- CCPA
+- EU-AI Act  →      AI RISKS
+- GDPR →           PERSONAL DATA
+- HIPPA in LLM Context →          HEALTH DATA / PHI
+- ISO/IEC 42001 →      AI GOVERNANCE
+- CCPA →           CALIFORNIA PRIVACY
 
 ### Governance Artifacts you will actually be asked to produce:
-- AUP (Acceptable use policy)
-- Conformity assessment
-- Data Protection impact Assessment (DPIA)
+- AUP (Acceptable use policy)   → What CAN users do?
+- Conformity assessment → Does the AI MEET requirements?
+- Data Protection impact Assessment (DPIA) → What PRIVACY risks exist?
 
 # Blue Team Defense & Monitoring
-- Defence in depth for LLM applications
+```
+BLUE TEAM
+   ↓
+Prevent → Detect → Monitor → Respond
+```
+
+- Defence in-depth for LLM applications (PREVENT)
     - Input Filter
     - Output Limiter
     - Rate Limiter
     - Observability/SIEM
-- Detection
+- DETECTION
     - Behavioural Baselining
     - Static Signatures
-- Canary Tokens And Honey Tokens
-- Logging
-- Observability
-- PII Redaction
-- AI Specific Incident Response
+    - Canary Tokens And Honey Tokens
+- MONITOR
+    - Logging
+    - Observability
+    - PII Redaction
+
+- RESPOND : AI Specific Incident Response
     - Contain
     - Preserve
     - Assess
     - Remediate
     - Notify
-- Purple Teaming - read team + Blue team
-
+ 
+### PURPLE TEAM
+```
+Red Team + Blue Team
+Attack → Detect → Learn → Improve
+```
 
 # Identity & Access Management for AI
 - RBAC/ABAC/Zero Trust
@@ -126,25 +138,25 @@ For AI systems:
 
 # Secure Agent Architecture & Design
 - Anatomy of secure Agents tool pipeline
-- Sandboxing
-- Circuit Breakers
-- Tool Allow-listing & Schema Validation
+- Sandboxing   →      Runs agent code and tools in an isolated environment with restricted filesystem.
+- Circuit Breakers    →     Automatically stop or pause agent/tool execution when abnormal behavior occured.
+- Tool Allow-listing & Schema Validation    →     Allow only approved tools and validate every tool parameter against a strict schema before execution.
 - System Prompt/Instruction-data channel isolation
 - Multi-Agent Trust boundaries
 - MCP security Architecture
 - Secure RAG pipelines design
 
 # Agent Lifecycle & Operations
-- Drift Monitoring
-- Regression Testing
-- Canary Rollout
-- Continuous Automated red teaming
-- Secure Decommisioning
-- Vibe-coding risk in AI-Assisted development
+- **Drift Monitoring**        → Is behavior changing?
+- **Regression Testing**     → Did the change break something?
+- **Canary Rollout**     → Test on a small percentage first
+- **Continuous Automated red teaming**    → Continuously attack/test it
+- **Secure Decommisioning**     → Remove access safely
+- **Vibe-coding risk in AI-Assisted development**    → Don't blindly trust AI-generated code
 
 # AIML Supply chain & Third Party risk
-- Model Provenance & Unsafe Deserialization
-- Unsafe deserialization
-- AI-BOM / ML-BOM
-- Plugin/MCP marketplace vetting
-- Rug-pull attacks
+- **Model Provenance & Unsafe Deserialization**    →    From where the AI model come from.
+- **Unsafe deserialization** → Loading untrusted serialized objects/models can allow attackers to execute arbitrary code on the system.
+- AI-BOM / ML-BOM → An inventory of AI/ML models, datasets, libraries, dependencies, and components used in an AI system.
+- Plugin/MCP marketplace vetting → Assess and verify third-party AI plugins/MCP servers
+- Rug-pull attacks  →  A trusted AI component is initially safe but later updated or replaced with malicious code after users adopt it.
