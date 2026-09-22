@@ -1,25 +1,25 @@
 # LLM Attacks and Adversarial Techniques
-- Direct
-- Indirect
-- Training Time
-- Supply chain
-- Jailbreak Families
+- **Direct**    →    Attack the prompt directly
+- **Indirect**    →    Attack through external data
+- **Training Time**    →    Attack while learning
+- **Supply chain**    →    Attack something you depend on(Third Party)
+- **Jailbreak Families** → Bypass model safety
     - PAIR
     - DAN Style
     - Skeleton Key
     - Crescendo
     - Many-Shot Jailbreaking
     - Adversarial Smuggling
-- Filter Evasion
-    - Token Smuggling
-    - Homologlyphs
-- Privacy and IP attacks ( 4 ways to steal from model )
-    - Model Extraction
-    - Membership Inference
-    - Model Invension
-    - Property inference
-- Availability Attacks  - Make Model Expensive
-- Data and Model Poisioning - Training time attack
+- **Filter Evasion**  →  Hide the attack from detection
+    - **Token Smuggling**  →   Encodes or splits sensitive words/instructions into tokens
+    - **Homologlyphs**    →    Replaces normal characters with visually similar Unicode characters
+- **Privacy and IP attacks** ( 4 ways to steal from model )
+    - **Model Extraction**     → Steal model behavior
+    - **Membership Inference**    → Was my data in training?
+    - **Model Invension**    → Reconstruct sensitive information
+    - **Property inference**   → Discover dataset properties
+- **Availability Attacks**   → Make inference expensive/unavailable
+- **Data and Model Poisioning** → Corrupt training/model integrity
 
 # OWSAP Top 10 For LLM Applications & Red Teaming
 - LLM01  :  Prompt Injection
