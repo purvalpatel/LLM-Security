@@ -160,3 +160,16 @@ Attack → Detect → Learn → Improve
 - **AI-BOM / ML-BOM** → An inventory of AI/ML models, datasets, libraries, dependencies, and components used in an AI system.
 - **Plugin/MCP marketplace vetting** → Assess and verify third-party AI plugins/MCP servers
 - **Rug-pull attacks**  →  A trusted AI component is initially safe but later updated or replaced with malicious code after users adopt it.
+
+# Tools for AIML Model Red-Teaming
+
+| Tool           | Main use                                                                               |
+| -------------- | -------------------------------------------------------------------------------------- |
+| **Garak**      | Automated LLM vulnerability scanning, jailbreaks, prompt injection, data leakage, etc. |
+| **PyRIT**      | Microsoft framework for automated AI risk identification and adversarial testing.      |
+| **Promptfoo**  | LLM evaluation, adversarial prompts, jailbreak testing, and regression testing.        |
+| **Giskard**    | Testing ML/LLM models for vulnerabilities, bias, robustness, and security issues.      |
+| **Inspect AI** | Agent/LLM evaluations, adversarial testing, and benchmark creation.                    |
+| **DeepTeam**   | Automated red teaming for LLM vulnerabilities such as prompt injection and jailbreaks. |
+| **ART**        | Adversarial attacks and robustness testing for ML models.                              |
+| **Counterfit** | Automated adversarial testing of AI/ML systems.                                        |
