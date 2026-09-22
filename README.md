@@ -46,8 +46,8 @@
     - Map
     - Measure
     - Manage
-- MITRE ATLAS
-Tactics: <br>
+- MITRE ATLAS <br>
+Tactics: MITRE ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems) is a knowledge base of adversary tactics and techniques targeting AI-enabled systems. <br>
     - Reconnaissance
     - Resource Development
     - Initial Access
