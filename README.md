@@ -138,13 +138,13 @@ Attack → Detect → Learn → Improve
 
 # Secure Agent Architecture & Design
 - Anatomy of secure Agents tool pipeline
-- Sandboxing   →      Runs agent code and tools in an isolated environment with restricted filesystem.
-- Circuit Breakers    →     Automatically stop or pause agent/tool execution when abnormal behavior occured.
-- Tool Allow-listing & Schema Validation    →     Allow only approved tools and validate every tool parameter against a strict schema before execution.
-- System Prompt/Instruction-data channel isolation
-- Multi-Agent Trust boundaries
-- MCP security Architecture
-- Secure RAG pipelines design
+- **Sandboxing**   →      Runs agent code and tools in an isolated environment with restricted filesystem.
+- **Circuit Breakers**    →     Automatically stop or pause agent/tool execution when abnormal behavior occured.
+- **Tool Allow-listing & Schema Validation**    →     Allow only approved tools and validate every tool parameter against a strict schema before execution.
+- **System Prompt/Instruction-data channel isolation**
+- **Multi-Agent Trust boundaries**
+- **MCP security Architecture**
+- **Secure RAG pipelines design**
 
 # Agent Lifecycle & Operations
 - **Drift Monitoring**        → Is behavior changing?
@@ -157,6 +157,6 @@ Attack → Detect → Learn → Improve
 # AIML Supply chain & Third Party risk
 - **Model Provenance & Unsafe Deserialization**    →    From where the AI model come from.
 - **Unsafe deserialization** → Loading untrusted serialized objects/models can allow attackers to execute arbitrary code on the system.
-- AI-BOM / ML-BOM → An inventory of AI/ML models, datasets, libraries, dependencies, and components used in an AI system.
-- Plugin/MCP marketplace vetting → Assess and verify third-party AI plugins/MCP servers
-- Rug-pull attacks  →  A trusted AI component is initially safe but later updated or replaced with malicious code after users adopt it.
+- **AI-BOM / ML-BOM** → An inventory of AI/ML models, datasets, libraries, dependencies, and components used in an AI system.
+- **Plugin/MCP marketplace vetting** → Assess and verify third-party AI plugins/MCP servers
+- **Rug-pull attacks**  →  A trusted AI component is initially safe but later updated or replaced with malicious code after users adopt it.
