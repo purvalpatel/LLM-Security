@@ -22,16 +22,16 @@
 - **Data and Model Poisioning** → Corrupt training/model integrity
 
 # OWSAP Top 10 For LLM Applications & Red Teaming
-- LLM01  :  Prompt Injection
-- LLM02  :  Sensitive information disclosure
-- LLM03  :  Supply chain
-- LLM04  :  Data and Model poisioning
-- LLM05  :  Improoper Output Handling
-- LLM06  :  Excessive Agency
-- LLM07  :  System Prompt Leakage
-- LLM08  :  Vector & Embedding weakness
-- LLM09  :  Misinformation
-- LLM10  :  Unbound consumption
+- LLM01  :  Prompt Injection        → INPUT
+- LLM02  :  Sensitive information disclosure    →    DATA
+- LLM03  :  Supply chain    →   DEPENDENCY 
+- LLM04  :  Data and Model poisioning    →    TRAINING    
+- LLM05  :  Improper Output Handling    →       OUTPUT
+- LLM06  :  Excessive Agency    →    PERMISSION
+- LLM07  :  System Prompt Leakage    →       PROMPT
+- LLM08  :  Vector & Embedding weakness    →       RAG
+- LLM09  :  Misinformation    →       ANSWER
+- LLM10  :  Unbound consumption    →       RESOURCES
 
 ### Some other terms:
 - Red Team
