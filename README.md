@@ -48,19 +48,22 @@
     - Manage
 - MITRE ATLAS <br>
 Tactics: MITRE ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems) is a knowledge base of adversary tactics and techniques targeting AI-enabled systems. <br>
-    - Reconnaissance
-    - Resource Development
-    - Initial Access
-    - ML Model Access
-    - Execution
-    - Persistance
-    - Defence Evasion
-    - Credential Access
-    - Discovery
-    - Collection
-    - ML Attack Staging
-    - Exfilteration
-    - Impact
+| Tactic                   | One-line explanation                                                                                                                          |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Reconnaissance**       | Attacker gathers information about the target AI system, models, infrastructure, users, or defenses.                                          |
+| **Resource Development** | Attacker obtains or creates resources such as accounts, infrastructure, datasets, tools, or models needed for an attack.                      |
+| **Initial Access**       | Attacker obtains an initial foothold or access to the target AI environment.                                                                  |
+| **AI/ML Model Access**   | Attacker gains access to an AI model or its interfaces to interact with, manipulate, or attack it.                                            |
+| **Execution**            | Attacker executes malicious code, commands, prompts, or actions within the target environment.                                                |
+| **Persistence**          | Attacker maintains access to the AI system or environment after the initial compromise.                                                       |
+| **Defense Evasion**      | Attacker attempts to hide malicious activity or bypass security controls and detection mechanisms.                                            |
+| **Credential Access**    | Attacker attempts to obtain passwords, API keys, tokens, or other authentication credentials.                                                 |
+| **Discovery**            | Attacker identifies systems, models, data, configurations, services, or other resources available in the environment.                         |
+| **Collection**           | Attacker gathers valuable data, prompts, model information, training data, or other target information.                                       |
+| **ML Attack Staging**    | Attacker prepares or positions malicious inputs, data, models, or other components for an ML-focused attack.                                  |
+| **Exfiltration**         | Attacker transfers stolen data, model information, credentials, or other valuable information outside the target environment.                 |
+| **Impact**               | Attacker causes harmful consequences such as data manipulation, service disruption, model degradation, financial loss, or unsafe AI behavior. |
+
 
 ### Threat Modeling AI system with Adapted STRIDE
 STRIDE (Spoofing, Temparing, Repudiation, Information Disclosure, DOS, Elevation of privillege)
