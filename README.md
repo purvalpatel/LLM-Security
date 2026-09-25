@@ -3,13 +3,13 @@
 - **Indirect**    →    Attack through external data
 - **Training Time**    →    Attack while learning
 - **Supply chain**    →    Attack something you depend on(Third Party)
-- **Jailbreak Families** → Bypass model safety
+- **Jailbreak Families** → Bypass model safety, make model produce restricted data.
     - PAIR
-    - DAN Style
+    - DAN Style →  (Do Anything Now)
     - Skeleton Key
     - Crescendo
     - Many-Shot Jailbreaking
-    - Adversarial Smuggling
+    - Adversarial Smuggling  →  hiding a malicious instruction inside something that looks normal or harmless.
 - **Filter Evasion**  →  Hide the attack from detection
     - **Token Smuggling**  →   Encodes or splits sensitive words/instructions into tokens
     - **Homologlyphs**    →    Replaces normal characters with visually similar Unicode characters
