@@ -230,6 +230,7 @@ Tool:
 ### Identity, Access, Memory & Advanced Topics
 - RBAC, ABAC & Zero Trust for LLM Platforms
 - Vector Database Security & Embedding Attacks
+    - Vector database security is about protecting the stored embeddings and retrival process from unauthorized access, manipulation, poisoning and leakage.
 - Context Window Security & Memory Persistence
     - Context Window Poisoning
     - Defenses
