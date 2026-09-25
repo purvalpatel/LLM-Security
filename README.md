@@ -1,3 +1,5 @@
+# CLLMSE 
+
 # LLM Attacks and Adversarial Techniques
 - **Direct**    →    Attack the prompt directly
 - **Indirect**    →    Attack through external data
@@ -182,3 +184,58 @@ Giskard → validate model security & quality
 Inspect AI → evaluate agents/LLMs
 ART → adversarial ML
 ```
+
+# CLLMSP
+## Application Security for AI Products
+
+### Traditional Vulns in AI Context: SSRF, XSS, SQLi
+
+### API Security: Auth, Rate Limiting & Streaming
+
+### DevSecOps for AI: CI/CD, Pentesting & Monitoring
+- AI-Specific CICD        → Beyond SAST/DAST.  you use normal CICD Pipeline, but the Tests and Validations you add specifically designed for AIML.
+- AI-Specific Pentesting  → It's not like AI doing Pentest automatically.
+```
+Traditional Pentest
+       │
+       ├── SQL Injection
+       ├── XSS
+       ├── Authentication
+       ├── API vulnerabilities
+       ├── Privilege escalation
+       └── Network vulnerabilities
+
+
+AI-Specific Pentest
+       │
+       ├── Prompt Injection
+       ├── Jailbreaks
+       ├── Data Extraction
+       ├── Tool Abuse
+       └── Indirect Injection / RAG
+```
+- Fuzzing → Finding Attacks automatically
+
+Tool:
+[LLMFuzzer](https://github.com/mnns/LLMFuzzer)
+
+- Monitoring    → Detecting Attacks after deployment.
+
+### Container Security and Supply chain
+- Container Security for LLM Workloads
+- AI Supply chain
+- Websocket security
+- Secure Logging
+
+### Identity, Access, Memory & Advanced Topics
+- RBAC, ABAC & Zero Trust for LLM Platforms
+- Vector Database Security & Embedding Attacks
+- Context Window Security & Memory Persistence
+    - Context Window Poisoning
+    - Defenses
+    - Memory Persistence Security
+- Incident Response for AI Systems
+    - AI-Specific IR Steps
+    - Break-Glass Procedures
+    - Behavioral Baseline Monitoring
+    - Service Mesh for LLM Microservices
