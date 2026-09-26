@@ -240,3 +240,11 @@ Tool:
     - Break-Glass Procedures
     - Behavioral Baseline Monitoring
     - Service Mesh for LLM Microservices
+
+
+### Tools & Platforms
+1. Ollama — Local LLM runtime — ollama.com
+2. LangChain / LangGraph — LLM orchestration frameworks
+3. Garak — LLM vulnerability scanner — github.com/leondz/garak
+4. Promptfoo — LLM testing and red teaming — promptfoo.dev
+5. Rebuff — Prompt injection detection — rebuff.ai
