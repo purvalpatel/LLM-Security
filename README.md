@@ -189,8 +189,16 @@ ART → adversarial ML
 ## Application Security for AI Products
 
 ### Traditional Vulns in AI Context: SSRF, XSS, SQLi
+- SSRF
+- XSS
+- SQLi
+- Path Traversal
 
 ### API Security: Auth, Rate Limiting & Streaming
+- Authentication
+- Rate Limiting
+- Streaming Security
+- Error Handling
 
 ### DevSecOps for AI: CI/CD, Pentesting & Monitoring
 - AI-Specific CICD        → Beyond SAST/DAST.  you use normal CICD Pipeline, but the Tests and Validations you add specifically designed for AIML.
