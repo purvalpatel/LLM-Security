@@ -3,6 +3,12 @@ Garak ( LLM Vulnerability scanner ) by NVIDIA.
 Security scanner for an LLM.
 
 Send many Adversarial prompts to model and checks the responses for weakness.
+
+### Setup:
+```
+python3 -m venv garak
+source garak/bin/activate
+```
 ```
 Garak
   ________________________
@@ -21,7 +27,7 @@ Hallucinatin tests,
 Other probs ]
 ```
 
-
+Export Environment variable:
 ```
 export OPENAICOMPATIBLE_API_KEY="dummy"
 ```
@@ -33,7 +39,7 @@ plugins:
   generators:
     openai:
       OpenAICompatible:
-        uri: "http://xx.xx.xxx.xx:8001/v1/"
+        uri: "http://xx.xx.xxx.xx:8001/v1/"    ## this is the URL of custom Model endpoint.
 ```
 Run:
 ```
