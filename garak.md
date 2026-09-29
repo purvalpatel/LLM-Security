@@ -71,5 +71,6 @@ run:
 system:
   parallel_attempts: 16
 ```
-
+The report will be available in .html file. <br>
+<img width="1888" height="913" alt="image" src="https://github.com/user-attachments/assets/92184231-001a-4114-861a-b8c50451205c" />
 
