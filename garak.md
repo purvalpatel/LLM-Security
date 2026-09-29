@@ -54,4 +54,22 @@ garak \
   --target_name qwen3.5-122b-a10b \
   --spec probes.promptinject
 ```
+Note - This is default prompt inject Scan. this will take time.
+
+You can limit it,
+```
+plugins:
+  generators:
+    openai:
+      OpenAICompatible:
+        uri: "http://10.10.110.50:8001/v1/"
+
+run:
+  generations: 1
+  soft_probe_prompt_cap: 20
+
+system:
+  parallel_attempts: 16
+```
+
 
