@@ -46,7 +46,7 @@ Run:
 garak   --config ~/garak-vllm.yaml   --target_type openai.OpenAICompatible   --target_name qwen3.5-122b-a10b   --spec probes.promptinject
 ```
 
-With Specific probes:
+With Specific probes Run only promptinject:
 ```
 garak \
   --config ~/garak-vllm.yaml \
